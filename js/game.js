@@ -37,7 +37,7 @@ for (let i = 0; i < code.length; i++) {
   const letter = code[i].toUpperCase(); // Use lowercase letter for image filename
   const image = document.createElement("img");
   image.classList.add("image"); // Add the "image" class for styling
-  image.src = `images/${letter}-blue.png`;
+  image.src = `image/${letter}-blue.png`;
   images.push(image); // Add the image to the array
 }
 
