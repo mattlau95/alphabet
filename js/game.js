@@ -54,7 +54,7 @@ document.addEventListener("keydown", (event) => {
   if (pressedKey === firstLetter && code.length > 0 && timeLeft > 0) {
   	codeLength = code.length;
   	number = 15 - codeLength;
-    images[number].src = `images/${firstLetter}-green.png`; // Change the first image to green
+    images[number].src = `img/${firstLetter}-green.png`; // Change the first image to green
     code = code.slice(1); // Remove the first letter from the code
     if(codeLength == 1){
     	barImage.src = 'images/pass.png';
