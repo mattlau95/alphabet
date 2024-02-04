@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Fifteen Images</title>
+		
+		<style>
+
+.timer-container {
+  width: 484px;
+  height: 20px; /* Adjust height as needed */
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 100%;
+  background-color: #F97777; /* Blue color, customize as needed */
+  transition: width 1s ease-in-out;
+}
+
+.time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+			.outer-container {
+    			width: 500px;
+    			height: 330px;
+    			margin: 41px auto 0 auto; 
+    			background-image: url("images/bkg.png"); /* Replace with your image path */
+   				background-size: cover;
+    			position: relative; /* For positioning the inner container */
+  			}
+
+			.image-container {
+				width: 490px;
+				height: 242px;
+				position: absolute; /* Position absolute for precise placement */
+				top: 41px; /* 41px down from the top */
+				left: 50%; /* Move to the horizontal center */
+				transform: translateX(-50%); /* Center horizontally */
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center; /* 8px spacing between elements */
+			}
+
+			.image {
+	 			width: 73px;
+				height: 74px;
+			}
+
+			.bar {
+				top: 290px;
+				position: absolute;
+				width: 484px;
+				left: 50%; /* Move to the horizontal center */
+				transform: translateX(-50%); /* Center horizontally */
+				height: 23px;
+			}
+
+			.statimg {
+				
+			}
+
+			.timertext {
+				text-align: center;
+
+			}
+		</style>
+
+</head>
+<body>
+
+<div class="outer-container">
+	<div class="image-container" id="image-display">
+  	</div>
+
+  	<div class="bar" id="status">
+  		<img class="statimg" src="images/def.png" id="statuses">
+ 	 </div>
+
+</div>
+
+<br>
+
+<div class="timer-container">
+  <div class="timer-bar" id="timer-bar"></div>
+</div>
+
+<p class="timertext" id="counttimer"> 5 </p>
+  <script src="js/game.js"></script>
+
+</body>
+</html>
