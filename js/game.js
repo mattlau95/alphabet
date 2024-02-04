@@ -37,7 +37,7 @@ for (let i = 0; i < code.length; i++) {
   const letter = code[i].toUpperCase(); // Use lowercase letter for image filename
   const image = document.createElement("img");
   image.classList.add("image"); // Add the "image" class for styling
-  image.src = `image/${letter}-blue.png`;
+  image.src = `img/${letter}-blue.png`;
   images.push(image); // Add the image to the array
 }
 
@@ -54,7 +54,7 @@ document.addEventListener("keydown", (event) => {
   if (pressedKey === firstLetter && code.length > 0 && timeLeft > 0) {
   	codeLength = code.length;
   	number = 15 - codeLength;
-    images[number].src = `img/${firstLetter}-green.png`; // Change the first image to green
+    images[number].src = `images/${firstLetter}-green.png`; // Change the first image to green
     code = code.slice(1); // Remove the first letter from the code
     if(codeLength == 1){
     	barImage.src = 'images/pass.png';
