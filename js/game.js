@@ -34,7 +34,7 @@ for (let i = 0; i < 15; i++) {
 
 // Create image elements for each character in the code
 for (let i = 0; i < code.length; i++) {
-  const letter = code[i].toLowerCase(); // Use lowercase letter for image filename
+  const letter = code[i].toUpperCase(); // Use lowercase letter for image filename
   const image = document.createElement("img");
   image.classList.add("image"); // Add the "image" class for styling
   image.src = `images/${letter}-blue.png`;
