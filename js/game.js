@@ -2,7 +2,7 @@ const timerBar = document.getElementById("timer-bar");
 const timerNum = document.getElementById("counttimer");
 const duration = 5; // 5 seconds
 const barImage = document.getElementById("statuses");
-
+let intervalId;
 let timeLeft = duration;
 
 const countdown = () => {
@@ -11,7 +11,7 @@ const countdown = () => {
   timeLeft--;
 
   if (timeLeft >= 0) {
-    setTimeout(countdown, 1000); // Update every second
+    intervalId = setTimeout(countdown, 1000); // Update every second
   } else {
     // Timer finished, do something here if needed
     timerBar.style.width = `${(timeLeft / duration) * 100}%`;
@@ -57,6 +57,7 @@ document.addEventListener("keydown", (event) => {
     images[number].src = `images/${firstLetter}-green.png`; // Change the first image to green
     code = code.slice(1); // Remove the first letter from the code
     if(codeLength == 1){
+      clearInterval(intervalId);
     	barImage.src = 'images/pass.png';
     	document.removeEventListener("keydown", this);
     }
